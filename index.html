@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ÚtilHub V7 | Todo lo útil en un solo lugar</title>
+  <meta name="description" content="ÚtilHub: herramientas para calcular, organizar, estudiar, comprar, buscar comida y encontrar lugares.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- FONDO -->
+  <div class="background-effects">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <a href="#inicio" class="brand">
+      <div class="brand-logo">U</div>
+      <div>
+        <strong>Útil<span>Hub</span></strong>
+        <small>Todo lo útil</small>
+      </div>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#comida">Comida</a>
+      <a href="#compras">Compras</a>
+      <a href="#cerca">Cerca de mí</a>
+      <a href="#estudiantes">Estudiantes</a>
+    </nav>
+
+    <button class="menu-button" id="menuButton">☰</button>
+
+  </header>
+
+
+  <!-- INICIO -->
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          ✦ ÚTILHUB V7
+        </div>
+
+        <h1>
+          Todo lo que necesitas,
+          <span>en un solo lugar.</span>
+        </h1>
+
+        <p>
+          Calcula, organiza, estudia, busca comida, encuentra tiendas
+          y descubre lugares cercanos de manera sencilla.
+        </p>
+
+        <div class="hero-search">
+          <span>⌕</span>
+          <input
+            type="text"
+            id="mainSearch"
+            placeholder="¿Qué necesitas?"
+            autocomplete="off"
+          >
+          <button id="searchButton">Buscar</button>
+        </div>
+
+        <div class="quick-buttons">
+          <a href="#herramientas">🧰 Herramientas</a>
+          <a href="#comida">🍔 Comida</a>
+          <a href="#compras">🛒 Compras</a>
+          <a href="#cerca">📍 Cerca de mí</a>
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="hub-symbol">
+          <div class="symbol-u">U</div>
+          <div class="symbol-dot"></div>
+        </div>
+
+        <div class="floating-card card-one">
+          🧮
+          <span>Calcula</span>
+        </div>
+
+        <div class="floating-card card-two">
+          📝
+          <span>Organiza</span>
+        </div>
+
+        <div class="floating-card card-three">
+          📍
+          <span>Encuentra</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ACCESOS RÁPIDOS -->
+    <section class="quick-section">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">ACCESO RÁPIDO</span>
+          <h2>¿Qué quieres hacer?</h2>
+        </div>
+      </div>
+
+      <div class="quick-grid">
+
+        <button class="quick-card" data-open-tool="calculator">
+          <div>🧮</div>
+          <strong>Calcular</strong>
+          <span>Haz cálculos rápidamente</span>
+        </button>
+
+        <button class="quick-card" data-open-tool="notes">
+          <div>📝</div>
+          <strong>Tomar una nota</strong>
+          <span>Guarda tus ideas</span>
+        </button>
+
+        <button class="quick-card" data-open-tool="tasks">
+          <div>✅</div>
+          <strong>Mis tareas</strong>
+          <span>Organiza tus pendientes</span>
+        </button>
+
+        <button class="quick-card" data-open-tool="shoppingList">
+          <div>🛍️</div>
+          <strong>Lista de compras</strong>
+          <span>Prepara tu lista</span>
+        </button>
+
+        <button class="quick-card" data-open-tool="discount">
+          <div>🏷️</div>
+          <strong>Descuento</strong>
+          <span>Calcula el precio final</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- HERRAMIENTAS -->
+    <section class="section" id="herramientas">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-label">CENTRO DE HERRAMIENTAS</span>
+          <h2>Herramientas útiles</h2>
+          <p>Utilidades para el día a día.</p>
+        </div>
+
+        <select id="categoryFilter">
+          <option value="all">Todas</option>
+          <option value="calculo">Cálculos</option>
+          <option value="organizacion">Organización</option>
+          <option value="utilidad">Utilidades</option>
+          <option value="estudio">Estudio</option>
+        </select>
+
+      </div>
+
+
+      <div class="tools-grid" id="toolsGrid">
+
+        <!-- 1 -->
+        <article class="tool-card" data-category="calculo" data-name="calculadora cálculo">
+          <div class="tool-icon">🧮</div>
+          <h3>Calculadora</h3>
+          <p>Realiza operaciones básicas.</p>
+          <button data-open-tool="calculator">Abrir</button>
+          <button class="favorite-btn" data-favorite="calculator">☆</button>
+        </article>
+
+        <!-- 2 -->
+        <article class="tool-card" data-category="calculo" data-name="porcentaje">
+          <div class="tool-icon">％</div>
+          <h3>Porcentajes</h3>
+          <p>Calcula porcentajes fácilmente.</p>
+          <button data-open-tool="percentage">Abrir</button>
+          <button class="favorite-btn" data-favorite="percentage">☆</button>
+        </article>
+
+        <!-- 3 -->
+        <article class="tool-card" data-category="calculo" data-name="descuento">
+          <div class="tool-icon">🏷️</div>
+          <h3>Descuentos</h3>
+          <p>Calcula cuánto pagarás.</p>
+          <button data-open-tool="discount">Abrir</button>
+          <button class="favorite-btn" data-favorite="discount">☆</button>
+        </article>
+
+        <!-- 4 -->
+        <article class="tool-card" data-category="calculo" data-name="regla de tres">
+          <div class="tool-icon">📐</div>
+          <h3>Regla de tres</h3>
+          <p>Resuelve proporciones.</p>
+          <button data-open-tool="ruleOfThree">Abrir</button>
+          <button class="favorite-btn" data-favorite="ruleOfThree">☆</button>
+        </article>
+
+        <!-- 5 -->
+        <article class="tool-card" data-category="calculo" data-name="promedio media">
+          <div class="tool-icon">📊</div>
+          <h3>Promedio</h3>
+          <p>Calcula la media de varios números.</p>
+          <button data-open-tool="average">Abrir</button>
+          <button class="favorite-btn" data-favorite="average">☆</button>
+        </article>
+
+        <!-- 6 -->
+        <article class="tool-card" data-category="calculo" data-name="gastos presupuesto">
+          <div class="tool-icon">💰</div>
+          <h3>Gastos</h3>
+          <p>Calcula tus gastos y presupuesto.</p>
+          <button data-open-tool="expenses">Abrir</button>
+          <button class="favorite-btn" data-favorite="expenses">☆</button>
+        </article>
+
+        <!-- 7 -->
+        <article class="tool-card" data-category="utilidad" data-name="unidades conversor">
+          <div class="tool-icon">📏</div>
+          <h3>Conversor</h3>
+          <p>Convierte medidas comunes.</p>
+          <button data-open-tool="converter">Abrir</button>
+          <button class="favorite-btn" data-favorite="converter">☆</button>
+        </article>
+
+        <!-- 8 -->
+        <article class="tool-card" data-category="utilidad" data-name="temperatura">
+          <div class="tool-icon">🌡️</div>
+          <h3>Temperatura</h3>
+          <p>Celsius, Fahrenheit y Kelvin.</p>
+          <button data-open-tool="temperature">Abrir</button>
+          <button class="favorite-btn" data-favorite="temperature">☆</button>
+        </article>
+
+        <!-- 9 -->
+        <article class="tool-card" data-category="utilidad" data-name="monedas dinero">
+          <div class="tool-icon">💱</div>
+          <h3>Monedas</h3>
+          <p>Convierte monedas con tasa consultada.</p>
+          <button data-open-tool="currency">Abrir</button>
+          <button class="favorite-btn" data-favorite="currency">☆</button>
+        </article>
+
+        <!-- 10 -->
+        <article class="tool-card" data-category="organizacion" data-name="temporizador timer">
+          <div class="tool-icon">⏱️</div>
+          <h3>Temporizador</h3>
+          <p>Cuenta regresiva.</p>
+          <button data-open-tool="timer">Abrir</button>
+          <button class="favorite-btn" data-favorite="timer">☆</button>
+        </article>
+
+        <!-- 11 -->
+        <article class="tool-card" data-category="organizacion" data-name="cronometro stopwatch">
+          <div class="tool-icon">⏲️</div>
+          <h3>Cronómetro</h3>
+          <p>Mide el tiempo transcurrido.</p>
+          <button data-open-tool="stopwatch">Abrir</button>
+          <button class="favorite-btn" data-favorite="stopwatch">☆</button>
+        </article>
+
+        <!-- 12 -->
+        <article class="tool-card" data-category="organizacion" data-name="notas">
+          <div class="tool-icon">📝</div>
+          <h3>Notas</h3>
+          <p>Guarda notas en este dispositivo.</p>
+          <button data-open-tool="notes">Abrir</button>
+          <button class="favorite-btn" data-favorite="notes">☆</button>
+        </article>
+
+        <!-- 13 -->
+        <article class="tool-card" data-category="organizacion" data-name="tareas">
+          <div class="tool-icon">✅</div>
+          <h3>Tareas</h3>
+          <p>Organiza tus pendientes.</p>
+          <button data-open-tool="tasks">Abrir</button>
+          <button class="favorite-btn" data-favorite="tasks">☆</button>
+        </article>
+
+        <!-- 14 -->
+        <article class="tool-card" data-category="organizacion" data-name="lista compras">
+          <div class="tool-icon">🛒</div>
+          <h3>Lista de compras</h3>
+          <p>Prepara lo que necesitas comprar.</p>
+          <button data-open-tool="shoppingList">Abrir</button>
+          <button class="favorite-btn" data-favorite="shoppingList">☆</button>
+        </article>
+
+        <!-- 15 -->
+        <article class="tool-card" data-category="utilidad" data-name="contraseña seguridad">
+          <div class="tool-icon">🔐</div>
+          <h3>Contraseñas</h3>
+          <p>Genera contraseñas aleatorias.</p>
+          <button data-open-tool="password">Abrir</button>
+          <button class="favorite-btn" data-favorite="password">☆</button>
+        </article>
+
+        <!-- 16 -->
+        <article class="tool-card" data-category="utilidad" data-name="codigo qr">
+          <div class="tool-icon">▦</div>
+          <h3>Código QR</h3>
+          <p>Crea un QR a partir de un texto o enlace.</p>
+          <button data-open-tool="qr">Abrir</button>
+          <button class="favorite-btn" data-favorite="qr">☆</button>
+        </article>
+
+        <!-- 17 -->
+        <article class="tool-card" data-category="utilidad" data-name="numero aleatorio">
+          <div class="tool-icon">🎲</div>
+          <h3>Número aleatorio</h3>
+          <p>Obtén un número dentro de un rango.</p>
+          <button data-open-tool="random">Abrir</button>
+          <button class="favorite-btn" data-favorite="random">☆</button>
+        </article>
+
+        <!-- 18 -->
+        <article class="tool-card" data-category="estudio" data-name="diccionario">
+          <div class="tool-icon">📖</div>
+          <h3>Diccionario</h3>
+          <p>Consulta definiciones.</p>
+          <button data-open-tool="dictionary">Abrir</button>
+          <button class="favorite-btn" data-favorite="dictionary">☆</button>
+        </article>
+
+        <!-- 19 -->
+        <article class="tool-card" data-category="estudio" data-name="organizador estudio">
+          <div class="tool-icon">🎓</div>
+          <h3>Estudio</h3>
+          <p>Organiza tus temas de estudio.</p>
+          <button data-open-tool="study">Abrir</button>
+          <button class="favorite-btn" data-favorite="study">☆</button>
+        </article>
+
+        <!-- 20 -->
+        <article class="tool-card" data-category="utilidad" data-name="fecha contador">
+          <div class="tool-icon">📅</div>
+          <h3>Contador de días</h3>
+          <p>Calcula los días entre fechas.</p>
+          <button data-open-tool="dateCounter">Abrir</button>
+          <button class="favorite-btn" data-favorite="dateCounter">☆</button>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="noResults">
+        No encontramos una herramienta con esa búsqueda.
+      </p>
+
+    </section>
+
+
+    <!-- COMIDA -->
+    <section class="special-section food-section" id="comida">
+
+      <div class="special-content">
+
+        <span class="section-label">🍔 COMIDA</span>
+
+        <h2>Busca dónde comer</h2>
+
+        <p>
+          Escribe qué comida o restaurante estás buscando.
+          ÚtilHub te ayuda a encontrar opciones y tú decides dónde pedir.
+        </p>
+
+        <div class="search-box">
+
+          <input
+            id="foodSearch"
+            type="text"
+            placeholder="Ejemplo: hamburguesas, pizza, menú..."
+          >
+
+          <button id="foodButton">Buscar comida</button>
+
+        </div>
+
+        <div class="chips">
+          <button data-food="Hamburguesas">🍔 Hamburguesas</button>
+          <button data-food="Pizza">🍕 Pizza</button>
+          <button data-food="Pollo">🍗 Pollo</button>
+          <button data-food="Comida peruana">🇵🇪 Peruana</button>
+          <button data-food="Cafeterías">☕ Cafeterías</button>
+        </div>
+
+      </div>
+
+      <div class="special-icon">🍔</div>
+
+    </section>
+
+
+    <!-- COMPRAS -->
+    <section class="special-section shopping-section" id="compras">
+
+      <div class="special-icon">🛒</div>
+
+      <div class="special-content">
+
+        <span class="section-label">🛒 COMPRAS</span>
+
+        <h2>Encuentra lo que buscas</h2>
+
+        <p>
+          Busca tiendas o productos. ÚtilHub abre los resultados para que
+          tú puedas revisar, comparar y realizar la compra por tu cuenta.
+        </p>
+
+        <div class="search-box">
+
+          <input
+            id="shopSearch"
+            type="text"
+            placeholder="Ejemplo: zapatillas, celulares, supermercado..."
+          >
+
+          <button id="shopButton">Buscar compras</button>
+
+        </div>
+
+        <div class="chips">
+          <button data-shop="Supermercados">🛍️ Supermercados</button>
+          <button data-shop="Tecnología">💻 Tecnología</button>
+          <button data-shop="Ropa">👕 Ropa</button>
+          <button data-shop="Librerías">📚 Librerías</button>
+          <button data-shop="Farmacias">💊 Farmacias</button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CERCA DE MÍ -->
+    <section class="nearby-section" id="cerca">
+
+      <div class="section-heading center-heading">
+
+        <span class="section-label">📍 CERCA DE MÍ</span>
+
+        <h2>Encuentra lugares</h2>
+
+        <p>
+          Busca restaurantes, tiendas, servicios y lugares cercanos.
+        </p>
+
+      </div>
+
+      <div class="nearby-grid">
+
+        <button class="nearby-card" data-place="Restaurantes">
+          <span>🍽️</span>
+          <strong>Restaurantes</strong>
+          <small>Buscar cerca</small>
+        </button>
+
+        <button class="nearby-card" data-place="Supermercados">
+          <span>🛒</span>
+          <strong>Supermercados</strong>
+          <small>Buscar cerca</small>
+        </button>
+
+        <button class="nearby-card" data-place="Farmacias">
+          <span>💊</span>
+          <strong>Farmacias</strong>
+          <small>Buscar cerca</small>
+        </button>
+
+        <button class="nearby-card" data-place="Cafeterías">
+          <span>☕</span>
+          <strong>Cafeterías</strong>
+          <small>Buscar cerca</small>
+        </button>
+
+        <button class="nearby-card" data-place="Talleres">
+          <span>🔧</span>
+          <strong>Talleres</strong>
+          <small>Buscar cerca</small>
+        </button>
+
+        <button class="nearby-card" data-place="Tiendas">
+          <span>🏪</span>
+          <strong>Tiendas</strong>
+          <small>Buscar cerca</small>
+        </button>
+
+      </div>
+
+      <button class="location-button" id="locationButton">
+        📍 Usar mi ubicación
+      </button>
+
+      <p class="location-status" id="locationStatus"></p>
+
+    </section>
+
+
+    <!-- ESTUDIANTES -->
+    <section class="section student-section" id="estudiantes">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-label">🎓 ESTUDIANTES</span>
+          <h2>Herramientas para estudiar</h2>
+          <p>Organiza mejor tus actividades académicas.</p>
+        </div>
+
+      </div>
+
+      <div class="student-grid">
+
+        <button class="student-card" data-open-tool="dictionary">
+          <span>📖</span>
+          <strong>Diccionario</strong>
+          <small>Busca palabras</small>
+        </button>
+
+        <button class="student-card" data-open-tool="study">
+          <span>🎓</span>
+          <strong>Organizador</strong>
+          <small>Organiza tus temas</small>
+        </button>
+
+        <button class="student-card" data-open-tool="average">
+          <span>📊</span>
+          <strong>Promedio</strong>
+          <small>Calcula notas</small>
+        </button>
+
+        <button class="student-card" data-open-tool="tasks">
+          <span>✅</span>
+          <strong>Tareas</strong>
+          <small>Controla pendientes</small>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAVORITOS / HISTORIAL -->
+    <section class="section personal-section">
+
+      <div class="personal-grid">
+
+        <div class="personal-box">
+
+          <span class="section-label">⭐ FAVORITOS</span>
+
+          <h2>Tus herramientas favoritas</h2>
+
+          <div id="favoritesList" class="saved-list">
+            <p>Aún no tienes favoritos.</p>
+          </div>
+
+        </div>
+
+        <div class="personal-box">
+
+          <span class="section-label">🕘 HISTORIAL</span>
+
+          <h2>Usadas recientemente</h2>
+
+          <div id="historyList" class="saved-list">
+            <p>Aún no hay historial.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFORMACIÓN -->
+    <section class="about-section">
+
+      <div class="about-card">
+
+        <div class="about-icon">✦</div>
+
+        <div>
+
+          <span class="section-label">SOBRE ÚTILHUB</span>
+
+          <h2>Una plataforma hecha para ser realmente útil.</h2>
+
+          <p>
+            ÚtilHub reúne herramientas digitales en un solo sitio.
+            No realiza compras automáticamente ni decide por ti:
+            te ayuda a encontrar opciones y tú eliges qué hacer.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- MODAL -->
+  <div class="modal" id="toolModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" id="modalClose">×</button>
+
+      <div id="modalBody"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-brand">
+      <div class="brand-logo">U</div>
+      <strong>Útil<span>Hub</span></strong>
+    </div>
+
+    <p>
+      Herramientas útiles para todos los días.
+    </p>
+
+    <div class="footer-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#comida">Comida</a>
+      <a href="#compras">Compras</a>
+      <a href="#cerca">Cerca de mí</a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> ÚtilHub V7
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
